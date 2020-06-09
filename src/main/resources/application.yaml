@@ -1,0 +1,9 @@
+spring:
+    jmx:
+        enabled: false
+
+javafx:
+    stage:
+        resizable: false
+    title: 文件解析
+    appicons: /logo.jpg
