@@ -98,7 +98,13 @@ public class HelloworldController implements Initializable {
             if (StringUtils.isEmpty(trim)) {
                 continue;
             }
-            list.add(trim);
+            if (trim.contains("PPLog [INFO]")) {
+                list.add(trim);
+            } else {
+                int index = list.size() - 1;
+                list.set(index, list.get(index) + "\n" + trim);
+            }
+
         }
         String replace = path.replace(text, text + "_RESULT");
         System.out.println(file.getName());
